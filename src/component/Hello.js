@@ -1,7 +1,4 @@
 // 모두 같은 표현
-
-import World from "./Word";
-
 // const Hello = function(){
 //     <p>Hello</p>;
 // }
@@ -10,12 +7,21 @@ import World from "./Word";
 //     <p>Hello</p>;
 // }
 
+import World from "./Word";
+import styles from "./Hello.module.css";
+
 export default function Hello() {
     return (
     <div>
-    <h1>Hello</h1>
-    <World />
-    <World />
+    <h1 style={
+        {
+            color : "#f00",
+            borderRight : '2px solid #000',
+            marginBottom : '50px',
+            opacity : 0.5,
+        }
+    }>Hello </h1>
+    <div className={styles.box}>Hello</div>
     </div>
     );
 }
