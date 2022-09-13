@@ -11,17 +11,25 @@ import World from "./Word";
 import styles from "./Hello.module.css";
 
 export default function Hello() {
+    function showNmae() {
+        console.log('Mike');
+    }
+    
     return (
     <div>
-    <h1 style={
-        {
-            color : "#f00",
-            borderRight : '2px solid #000',
-            marginBottom : '50px',
-            opacity : 0.5,
-        }
-    }>Hello </h1>
-    <div className={styles.box}>Hello</div>
+    <h1>
+        Hello
+    </h1>
+    {/* 방법 2가지 */}
+    <button onClick={showNmae}>Show name</button>
+    
+    {/*  매개변수 전달하기 편함 */}
+    <button 
+    onClick={() => {
+        console.log(30);
+    }}>
+        Show age
+    </button> 
     </div>
     );
 }
