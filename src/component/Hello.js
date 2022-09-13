@@ -14,6 +14,12 @@ export default function Hello() {
     function showNmae() {
         console.log('Mike');
     }
+    function showAge(age) {
+        console.log(age);
+    }
+    function showText(e){
+        console.log(e.target.value);
+    }
     
     return (
     <div>
@@ -22,14 +28,15 @@ export default function Hello() {
     </h1>
     {/* 방법 2가지 */}
     <button onClick={showNmae}>Show name</button>
-    
+
     {/*  매개변수 전달하기 편함 */}
     <button 
     onClick={() => {
-        console.log(30);
+        showAge(10);
     }}>
         Show age
-    </button> 
+    </button><br></br>
+    <input type='text' onChange={showText}></input>
     </div>
     );
 }
